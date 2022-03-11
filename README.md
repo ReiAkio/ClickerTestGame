@@ -1,0 +1,2 @@
+# ClickerTestGame
+Jogo mobile Clicker
