@@ -13,7 +13,7 @@ public class Clickable : MonoBehaviour
 
     public Text scoreText;
 
-    private int score;
+    public int score;
 
     public void PrepareClick()
     {
@@ -49,4 +49,5 @@ public class Clickable : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
     }
+    
 }
