@@ -12,8 +12,10 @@ public class Clickable : MonoBehaviour
     [SerializeField] private bool clicking;
 
     public Text scoreText;
+    public Product pd;
 
     private int score;
+    
 
     public void PrepareClick()
     {
@@ -38,6 +40,11 @@ public class Clickable : MonoBehaviour
         clicking = false;
         ChangeImage();
     }
+    
+    public void Buying()
+    {
+        score = getScore() - pd.cost;
+    } 
 
     private void ChangeImage()
     {
@@ -48,5 +55,10 @@ public class Clickable : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
