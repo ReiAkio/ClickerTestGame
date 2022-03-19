@@ -601,8 +601,9 @@ MonoBehaviour:
   unclicked: {fileID: 0}
   clicked: {fileID: 0}
   clicking: 0
+  vi: {fileID: 11400000, guid: 72f9a91933297b64dab42cafa943f964, type: 2}
   scoreText: {fileID: 1939684045}
-  pd: {fileID: 11400000, guid: 8b462e3e7a142ba4baf1f6eea540ead1, type: 2}
+  pd: {fileID: 11400000, guid: 72f9a91933297b64dab42cafa943f964, type: 2}
 --- !u!1 &1939684043
 GameObject:
   m_ObjectHideFlags: 0

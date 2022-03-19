@@ -11,6 +11,7 @@ public class Clickable : MonoBehaviour
 
     [SerializeField] private bool clicking;
 
+    public VisualItem vi;
     public Text scoreText;
     public Product pd;
 
@@ -22,7 +23,6 @@ public class Clickable : MonoBehaviour
         if (!clicking)
         {
             clicking = true;
-            ChangeImage();
         }
         else
         {
@@ -38,17 +38,20 @@ public class Clickable : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         clicking = false;
-        ChangeImage();
+        
     }
     
     public void Buying()
     {
-        score = getScore() - pd.cost;
-    } 
-
-    private void ChangeImage()
-    {
-        GetComponent<Image>().sprite = clicking ? clicked : unclicked;
+        if (getScore() >= 10)
+        {
+            score = getScore() - pd.cost;
+            vi.Test();
+        }
+        else
+        {
+            score = getScore();
+        }
     }
 
     private void Score()

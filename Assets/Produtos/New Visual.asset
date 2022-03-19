@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 280d9bc1d0a2ec84788b74c702b54a76, type: 3}
-  m_Name: Chapeuzinho
+  m_Script: {fileID: 11500000, guid: a5ad6c234370889488222a0d2479d4ed, type: 3}
+  m_Name: New Visual
   m_EditorClassIdentifier: 
-  name: Chapeu
+  name: square
   cost: 10
-  click: {fileID: 0}
