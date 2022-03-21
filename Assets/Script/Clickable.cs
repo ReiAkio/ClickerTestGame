@@ -15,7 +15,7 @@ public class Clickable : MonoBehaviour
     public Text scoreText;
     public Product pd;
 
-    private int score;
+    public int score;
     
 
     public void PrepareClick()
@@ -39,19 +39,6 @@ public class Clickable : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         clicking = false;
         
-    }
-    
-    public void Buying()
-    {
-        if (getScore() >= 10)
-        {
-            score = getScore() - pd.cost;
-            vi.Test();
-        }
-        else
-        {
-            score = getScore();
-        }
     }
 
     private void Score()

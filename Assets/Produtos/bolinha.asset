@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5ad6c234370889488222a0d2479d4ed, type: 3}
-  m_Name: New Visual
+  m_Name: bolinha
   m_EditorClassIdentifier: 
-  name: square
-  cost: 0a0000000f000000
-  image:
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  name: 
+  cost: 
+  image: []
