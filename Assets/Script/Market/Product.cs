@@ -17,6 +17,7 @@ public class Product : ScriptableObject
         foreach (var cost in cost)
         {
             costQueue.Enqueue(cost);
+            Debug.Log(cost);
         }
     }
 

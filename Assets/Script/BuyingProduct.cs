@@ -8,7 +8,7 @@ public class BuyingProduct : MonoBehaviour
     public Product product;
     public Clickable click;
     public GameObject productObject;
-    void Start()
+    void Awake() //1 para 1 - cada product(scriptable object) é vinculado à 1 botão. Não pode ter 2 botão com o mesmo product
     {
         product.AddQueueCost();
         product.AddQueueImage();
