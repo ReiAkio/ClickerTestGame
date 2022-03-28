@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,23 @@ using UnityEngine.UI;
 
 public class BuyingProduct : MonoBehaviour
 {
-    public Product product;
-    public Clickable click;
-    public GameObject productObject;
-    void Start()
+
+    public BuffItem buffItem;
+    public Clickable clickable;
+    public InventoryManager inventoryManager;
+
+    public void Start()
     {
-        product.AddQueueCost();
-        product.AddQueueImage();
+        GetComponent<Image>().sprite = buffItem.image;
     }
 
-    public void BuyButton()
+    public void BuyBuffItem()
     {
-        if (product.costQueue.Peek() <= click.score)
-            {
-                click.score -= product.costQueue.Dequeue();
-                click.scoreText.text = click.score.ToString();
-                productObject.SetActive(true);
-                productObject.GetComponent<Image>().sprite = product.imageQueue.Dequeue();
-            }
-        
+        if (buffItem.cost <= clickable.score)
+        {
+            clickable.RemoveScore(buffItem.cost);
+            inventoryManager.Add(buffItem);
+        }
     }
+
 }
