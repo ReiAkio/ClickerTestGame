@@ -6,21 +6,8 @@ using UnityEngine.UI;
 
 public class Clickable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-
-    public VisualItem vi;
     public Text scoreText;
-    public Product pd;
-
     public int score;
-    
-
-    public IEnumerator Click()
-    {
-        Score();
-
-        yield return new WaitForSeconds(0.5f);
-
-    }
 
     public void Score()
     {
